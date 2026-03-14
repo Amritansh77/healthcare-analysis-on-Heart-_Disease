@@ -82,15 +82,13 @@ input[type=text], select {
 }
 
 label {
-
-	display: list-item;
-    width: 200px;
-	font-weight: bold;
-	text-align: center;
-	font-family: ui-serif;
-	float: left;
-    margin: 22px 0px 0px 0px;
-  }
+    display: inline-block;
+    width: 260px;
+    font-weight: bold;
+    text-align: left;
+    font-family: ui-serif;
+    margin: 15px 0px 0px 0px;
+}
 
 /* Predict Button */
 .my-cta-button{
