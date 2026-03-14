@@ -18,18 +18,19 @@ def home():
 def predict():
     if request.method == 'POST':
         age = int(request.form['age'])
-        sex = request.form.get('sex')
-        cp = request.form.get('cp')
+        sex = int(request.form['sex'])
+        cp = int(request.form['cp'])
         trestbps = int(request.form['trestbps'])
         chol = int(request.form['chol'])
-        fbs = request.form.get('fbs')
+        fbs = int(request.form['fbs'])
         restecg = int(request.form['restecg'])
         thalach = int(request.form['thalach'])
-        exang = request.form.get('exang')
+        exang = int(request.form['exang'])
         oldpeak = float(request.form['oldpeak'])
-        slope = request.form.get('slope')
+        slope = int(request.form['slope'])
         ca = int(request.form['ca'])
-        thal = request.form.get('thal')
+        thal = int(request.form['thal'])
+        
 
         data = np.array([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
         my_prediction = model.predict(data)
